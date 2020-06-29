@@ -1,11 +1,11 @@
 <template>
   <transition name="viewer-fade">
     <div tabindex="-1" ref="el-image-viewer__wrapper" class="el-image-viewer__wrapper" :style="{ 'z-index': zIndex }">
-      <div class="el-image-viewer__mask"></div>
+      <div class="el-image-viewer__mask" @click="hide"></div>
       <!-- CLOSE -->
-      <span class="el-image-viewer__btn el-image-viewer__close" @click="hide">
-        <i class="el-icon-circle-close"></i>
-      </span>
+<!--      <span class="el-image-viewer__btn el-image-viewer__close" >-->
+<!--        <i class="el-icon-circle-close"></i>-->
+<!--      </span>-->
       <!-- ARROW -->
       <template v-if="!isSingle">
         <span
